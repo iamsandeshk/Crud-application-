@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffffbb;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.423);
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+  }
+  
+  h1, h2 {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: flex;
+  }
+  
+  input[type="text"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+  }
+  
+  button.create {
+    padding: 10px;
+    width: 3.5rem;
+    height: 2.25rem;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #000;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
+  }
+  
+  button.create:hover {
+    background: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures border radius is applied */
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    position: relative;
+  }
+  
+  th {
+    background: #f9f9f9;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.597);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  button.save {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #000;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button.save:hover {
+    background: #333;
+  }
+  
+  button.cancel {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #ccc;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button.cancel:hover {
+    background: #999;
+  }
+  
+  table tr {
+    transition: background 0.3s ease;
+  }
+  
+  table tr:hover {
+    background: #f1f1f1;
+  }
+  
+  button.edit, button.delete {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button.edit:hover, button.delete:hover {
+    background: #0056b3;
+  }
+  
+  button.delete {
+    right: 50px;
+    background: #ff0000;
+  }
+  
+  button.delete:hover {
+    background: #cc0000;
+  }
+  
+  table tr:hover button.edit, table tr:hover button.delete {
+    display: inline-block;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .top-bar {
+      flex-direction: column;
+    }
+  
+    input[type="text"], select, button.create {
+      width: 100%;
+      margin: 5px 0;
+    }
+  
+    table, th, td {
+      font-size: 14px;
+    }
+  }
+  

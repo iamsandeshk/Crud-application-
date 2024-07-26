@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Management</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Books</h1>
+      <div class="top-bar">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search books"
+          onkeyup="searchBooks()"
+        />
+        <button id="create-btn" class="create">
+          <i class="fas fa-pencil"></i>
+        </button>
+      </div>
+      <table id="book-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Status</th>
+            <th>Checked Out By</th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+    <form id="book-form" class="hidden">
+      <h2>New Book</h2>
+      <input type="hidden" id="book-id" />
+      <label for="book-name">Title:</label>
+      <input
+        type="text"
+        id="book-name"
+        placeholder="Enter book title"
+        required
+      />
+
+      <label for="book-author">Author:</label>
+      <input
+        type="text"
+        id="book-author"
+        placeholder="Enter book author"
+        required
+      />
+
+      <label for="book-status">Status:</label>
+      <select id="book-status" required>
+        <option value="">Choose an option</option>
+        <option value="Available">Available</option>
+        <option value="Not Available">Not Available</option>
+      </select>
+
+      <label for="checkout-date">Checked Out By:</label>
+      <input type="text" id="checkout-date" placeholder="Enter name" required />
+
+      <div class="form-buttons">
+        <button type="submit" class="save">Save</button>
+        <button type="button" id="cancel-btn" class="cancel">Cancel</button>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
